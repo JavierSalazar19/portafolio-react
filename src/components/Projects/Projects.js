@@ -6,7 +6,7 @@ import ProjectCards from './ProjectCards';  // Ajusta la ruta según tu estructu
 
 const Projects = () => {
   const [repos, setRepos] = useState([]);
-  const username = 'JavierSalazar19';
+  const username = 'JavierSalazar19';//dasd
 
   useEffect(() => {
     const fetchRepos = async () => {
