@@ -22,7 +22,7 @@ const FirestoreData = () => {
   return (
     <div>
       <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
-        Datos de<strong className="purple"> Firebase</strong> 
+        Datos de Firebase
       </h1>
       <ul>
         {data.map(item => (

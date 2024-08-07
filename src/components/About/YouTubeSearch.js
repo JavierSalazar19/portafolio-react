@@ -26,7 +26,7 @@ const YouTubeSearch = ({ videoIds }) => {
   return (
     <div>
       <h1 className="project-heading" style={{ paddingBottom: "20px" }}>
-        Top<strong className="purple"> Natanael</strong> 
+        Top Natanael
       </h1>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
         {videos.map((video) => (

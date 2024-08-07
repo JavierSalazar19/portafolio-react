@@ -20,7 +20,7 @@ body {
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-      animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear;
   }
 }
 
@@ -33,6 +33,8 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px; /* Añadir padding para un mejor espaciado */
+  box-sizing: border-box;
 }
 
 .App-link {
@@ -41,9 +43,27 @@ body {
 
 @keyframes App-logo-spin {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+    padding: 10px; /* Reducir padding en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    font-size: calc(6px + 2vmin);
+    padding: 5px; /* Reducir padding en pantallas muy pequeñas */
+  }
+}
+
+

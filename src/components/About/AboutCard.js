@@ -1,23 +1,36 @@
 import React from "react";
 import Card from "react-bootstrap/Card"; // Tarjeta
-import { ImPointRight } from "react-icons/im"; // Icono de punto
+import miImagen from "../../Assets/Familia.jpg";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 function AboutCard() {
   return (
-    <Card className="quote-card-view"> {/* Vista de tarjeta de cita */}
+    <Card className="quote-card-view" style={{ maxWidth: '800px', margin: '0 auto' }}>
       <Card.Body>
-        <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            ¡Hola a todos! Soy <span className="purple">Javier Salazar </span> 
-            de <span className="purple"> San Ignacio Río Muerto.</span> 
-            <br />
-            Actualmente soy estudiante en la Universidad Tecnológica del Sur de Sonora. 
-            <br />
-          </p>
-         
-
-         
-        </blockquote>
+        <Row>
+          <Col md={8}>
+            <blockquote className="blockquote mb-0">
+              <p style={{ textAlign: "justify" }}>
+                Mayor parte de ella vive en CD Obregon; son muy pocos en EEUU y San Ignacio Río Muerto. 
+                <br></br>
+                <br></br>
+                Toda mi vida de estudios he estado viviendo aquí en mi hogar donde principalmente vienen todos a pasar sus vacaciones, ya que mis dos abuelos tanto paternos como maternos viven aquí.   
+                <br></br>
+                <br />
+                Me gusta mucho pasar tiempo de calidad con ellos, reír juntos y divertirnos❤️.
+                <br />
+              </p>
+            </blockquote>
+          </Col>
+          <Col md={4}>
+            <img
+              src={miImagen}
+              alt="San Ignacio"
+              className="about-img"
+            />
+          </Col>
+        </Row>
       </Card.Body>
     </Card>
   );
