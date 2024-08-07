@@ -1,3 +1,14 @@
+/* src/App.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: url('./Assets/background.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  color: #c0b4b4; /* Ajusta el color del texto si es necesario */
+}
+
 .App {
   text-align: center;
 }
@@ -9,12 +20,12 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+      animation: App-logo-spin infinite 20s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,9 +41,9 @@
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+      transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+      transform: rotate(360deg);
   }
 }

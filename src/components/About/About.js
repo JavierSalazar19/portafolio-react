@@ -5,7 +5,6 @@ import Particle from "../Particle";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 import FirestoreData from "./FirestoreData"; // Importar el nuevo componente
 import YouTubeSearch from "./YouTubeSearch"; // Importa el componente YouTubeSearch
@@ -37,7 +36,7 @@ function About() {
             style={{ paddingTop: "120px", paddingBottom: "50px" }}
             className="about-img"
           >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+           
           </Col>
         </Row>
         <h1 className="project-heading">
