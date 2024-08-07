@@ -6,10 +6,10 @@ import Col from "react-bootstrap/Col";
 
 function AboutCard() {
   return (
-    <Card className="quote-card-view" style={{ maxWidth: '800px', margin: '0 auto' }}>
+    <Card className="quote-card-view" style={{ margin: '0 auto', alignItems:'center' }}>
       <Card.Body>
         <Row>
-          <Col md={8}>
+          <Col md={6}>
             <blockquote className="blockquote mb-0">
               <p style={{ textAlign: "justify" }}>
                 Mayor parte de ella vive en CD Obregon; son muy pocos en EEUU y San Ignacio Río Muerto. 
@@ -23,7 +23,7 @@ function AboutCard() {
               </p>
             </blockquote>
           </Col>
-          <Col md={4}>
+          <Col md={6}>
             <img
               src={miImagen}
               alt="San Ignacio"
