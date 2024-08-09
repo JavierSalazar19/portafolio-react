@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ProjectCards from './ProjectCards';  // Ajusta la ruta según tu estructura
 
 const Projects = () => {
   const [repos, setRepos] = useState([]);
-  const username = 'JavierSalazar19';//dasd
+  const username = 'JavierSalazar19';
 
   useEffect(() => {
     const fetchRepos = async () => {
@@ -22,22 +21,48 @@ const Projects = () => {
   }, [username]);
 
   return (
-    <div>
-       <Row style={{ justifyContent: "center", paddingTop: "50px" }}>
-       <h1 className="project-heading" style={{ marginTop: "50px" }}>
-          Mis <strong className="purple">Trabajos</strong> Recientes
+    <div className="container">
+      <Row className="justify-content-center" style={{ paddingTop: '50px' }}>
+        <h1 className="project-heading" style={{ marginTop: '50px' }}>
+          Mis Trabajos Recientes
         </h1>
       </Row>
-      <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+      <Row className="justify-content-center" style={{ paddingBottom: '10px' }}>
         {repos.map(repo => (
-          <Col md={4} className="project-card" key={repo.id}>
-            <ProjectCards
-             
-              title={repo.name}
-            
-              ghLink={repo.html_url}
-            />
-           
+          <Col xs={12} sm={6} md={4} lg={3} key={repo.id} className="d-flex justify-content-center">
+            <div
+              style={{
+                border: '1px solid #ddd',
+                borderRadius: '40px',
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                marginBottom: '20px',
+                padding: '20px',
+                textAlign: 'center',
+                background: '#405641',
+                transition: 'transform 0.2s ease-in-out',
+                width: '100%',
+                maxWidth: '300px',
+              }}
+              className="project-card"
+            >
+              <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{repo.name}</h3>
+              <a
+                href={repo.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: '#fff',
+                  backgroundColor: '#28a745',
+                  padding: '10px 20px',
+                  borderRadius: '30px',
+                  textDecoration: 'none',
+                  display: 'inline-block',
+                  marginTop: '10px',
+                }}
+              >
+                Ver en GitHub
+              </a>
+            </div>
           </Col>
         ))}
       </Row>
